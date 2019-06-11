@@ -68,12 +68,14 @@ print("631-422-2020")
 print (now.strftime("%Y-%m-%d %H:%M"))   #https://www.saltycrane.com/blog/2008/06/how-to-get-current-date-and-time-in/
 print("---------------------")
 
+
+
 for selected_id in selected_ids:
         matching_products = [p for p in products if str(p["id"]) == str(selected_id)]
         matching_product = matching_products[0]
         total_price = total_price + matching_product["price"]
-        print("SELECTED PRODUCT: " + matching_product["name"] + " " + str(matching_product["price"]))
+        price_usd = "${0:.2f}".format(matching_product["price"])   #this line coverts price format
+        print("SELECTED PRODUCT: " + matching_product["name"] + " " + str(price_usd))
+        
 
-
-
-print("TOTAL PRICE: " + str(total_price))
+print("TOTAL PRICE: " + str("${0:.2f}".format(total_price)))
