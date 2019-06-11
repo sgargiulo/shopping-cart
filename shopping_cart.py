@@ -65,7 +65,8 @@ now = datetime.datetime.now()
 print("---------------------")
 print("SEAN'S GROCERY STORE")
 print("631-422-2020")
-print (now.strftime("%Y-%m-%d %H:%M"))   #https://www.saltycrane.com/blog/2008/06/how-to-get-current-date-and-time-in/
+print("---------------------")
+print ("CHECKOUT AT" + " " + now.strftime("%Y-%m-%d %H:%M"))   #https://www.saltycrane.com/blog/2008/06/how-to-get-current-date-and-time-in/
 print("---------------------")
 
 
@@ -77,5 +78,14 @@ for selected_id in selected_ids:
         price_usd = "${0:.2f}".format(matching_product["price"])   #this line coverts price format
         print("SELECTED PRODUCT: " + matching_product["name"] + " " + str(price_usd))
         
+print("---------------------")
+subtotal = ("${0:.2f}".format(total_price))
+print("SUBTOTAL: " + str(subtotal))
+tax = .08875 * total_price
+print("TAX: " + str("${0:.2f}".format(tax)))
+total = total_price + tax
+print("TOTAL: " + str("${0:.2f}".format(total)))
 
-print("TOTAL PRICE: " + str("${0:.2f}".format(total_price)))
+print("---------------------")
+
+print("THANK YOU HOPE TO SEE YOU AGAIN SOON!")
