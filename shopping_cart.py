@@ -53,18 +53,9 @@ while True:  #this will loop the program
         print("PLEASE START OVER USING CORRECT PRODUCT ID")
         exit()
     
-        
-
-    
-       
-    
-
-
 #
 # INFO DISPLAY
 #
-
-
 
 #print(selected_ids)
 
@@ -74,6 +65,7 @@ now = datetime.datetime.now()
 print("---------------------")
 print("GARGIULO'S MEAT MARKET")
 print("631-422-2020")
+print("GARGIULOSMEATMARKET.COM")
 print("---------------------")
 print ("CHECKOUT AT" + " " + now.strftime("%Y-%m-%d %H:%M"))   #https://www.saltycrane.com/blog/2008/06/how-to-get-current-date-and-time-in/
 print("---------------------")
