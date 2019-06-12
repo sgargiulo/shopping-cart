@@ -39,7 +39,6 @@ selected_ids = []
 id_list = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
 
 
-
 while True:  #this will loop the program
     selected_id = input("Please input a product identifier: ")  #this is a string 
     if selected_id == "DONE" or selected_id == "done" or selected_id == "Done" :
