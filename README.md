@@ -36,19 +36,21 @@ From within the virtual environment, demonstrate your ability to run the Python 
 ```sh
 python shopping_cart.py
 ```
-If working properly, you should see the "products" data structure 
-
-## Setup
-
-
+If working properly, you should see the "Please input a product identifier:
 
 ## Usage
 
 Run the recommendation script:
 
 ```py
-python app/shopping_cart.py
+python shopping_cart.py
 ```
+
+Input product identifiers one at a time
+
+Once completed enter "done" without the quotes
+
+If you enter an invalid product number you will have to start over
 
 ## Testing
 
