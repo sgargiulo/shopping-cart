@@ -34,14 +34,15 @@ products = [
 # INFO CAPTURE
 #
 
-
 total_price = 0
 selected_ids = []
+id_list = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+
 
 
 while True:  #this will loop the program
     selected_id = input("Please input a product identifier: ")  #this is a string 
-    if selected_id == "DONE":
+    if selected_id == "DONE" or selected_id == "done" or selected_id == "Done" :
         break   #this ends the loop
     else:
         #matching_products = [p for p in products if str(p["id"]) == str(selected_id)]
@@ -49,6 +50,15 @@ while True:  #this will loop the program
         #total_price = total_price + matching_product["price"]
         #print("SELECTED PRODUCT: " + matching_product["name"] + " " + str(matching_product["price"]))
         selected_ids.append(selected_id)
+    if selected_id not in str(id_list):
+        print("PLEASE START OVER USING CORRECT PRODUCT ID")
+        exit()
+    
+        
+
+    
+       
+    
 
 
 #
@@ -63,20 +73,20 @@ import datetime
 now = datetime.datetime.now()
 
 print("---------------------")
-print("SEAN'S GROCERY STORE")
+print("GARGIULO'S MEAT MARKET")
 print("631-422-2020")
 print("---------------------")
 print ("CHECKOUT AT" + " " + now.strftime("%Y-%m-%d %H:%M"))   #https://www.saltycrane.com/blog/2008/06/how-to-get-current-date-and-time-in/
 print("---------------------")
 
-
+print("SELECTED PRODUCTS:")
 
 for selected_id in selected_ids:
         matching_products = [p for p in products if str(p["id"]) == str(selected_id)]
         matching_product = matching_products[0]
         total_price = total_price + matching_product["price"]
         price_usd = "${0:.2f}".format(matching_product["price"])   #this line coverts price format
-        print("SELECTED PRODUCT: " + matching_product["name"] + " " + str(price_usd))
+        print("    " + matching_product["name"] + " " + str(price_usd))
         
 print("---------------------")
 subtotal = ("${0:.2f}".format(total_price))
@@ -89,3 +99,5 @@ print("TOTAL: " + str("${0:.2f}".format(total)))
 print("---------------------")
 
 print("THANK YOU HOPE TO SEE YOU AGAIN SOON!")
+
+print("---------------------")
