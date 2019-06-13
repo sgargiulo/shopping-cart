@@ -26,18 +26,6 @@ conda create -n shopping-env python=3.7 # (first time only)
 conda activate shopping-env
 ```
 
-From inside the virtual environment, install package dependencies:
-
-```sh
-pip install pytest
-```
-From within the virtual environment, demonstrate your ability to run the Python script from the command-line:
-
-```sh
-python shopping_cart.py
-```
-If working properly, you should see the "Please input a product identifier:
-
 ## Usage
 
 Run the recommendation script:
@@ -45,28 +33,14 @@ Run the recommendation script:
 ```py
 python shopping_cart.py
 ```
+If working properly, you should see the "Please input a product identifier: 
 
 Input product identifiers one at a time
 
-Once completed enter "done" without the quotes
+Once completed enter 'done', 'DONE', or 'Done" without the quotes
 
-If you enter an invalid product number you will have to start over
+If you enter an invalid product number you will be notified 
 
-## Testing
-
-Install pytest (first time only):
-
-```sh
-pip install pytest
-```
-
-Run tests:
-
-```sh
-pytest
-
-# or, skipping tests that issue network requests:
-CI=true pytest
-```
+After entering done, your receipt will be displayed
 
 ## [License](/LICENSE.md)
