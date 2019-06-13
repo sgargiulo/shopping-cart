@@ -36,22 +36,36 @@ products = [
 
 total_price = 0
 selected_ids = []
-id_list = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+##id_list = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+valid_ids = [str(p["id"]) for p in products] # doing comparisons with string versions of these ids
+print("VALID IDS:", valid_ids)
 
+##while True:  #this will loop the program
+##    selected_id = input("Please input a product identifier: ")  #this is a string 
+##    if selected_id == "DONE" or selected_id == "done" or selected_id == "Done" :
+##        break   #this ends the loop
+##    else:
+##        #matching_products = [p for p in products if str(p["id"]) == str(selected_id)]
+##        #matching_product = matching_products[0]
+##        #total_price = total_price + matching_product["price"]
+##        #print("SELECTED PRODUCT: " + matching_product["name"] + " " + str(matching_product["price"]))
+##        selected_ids.append(selected_id)
+##    if selected_id not in str(id_list):
+##        print("PLEASE START OVER USING CORRECT PRODUCT ID")
+##        exit()
 
-while True:  #this will loop the program
-    selected_id = input("Please input a product identifier: ")  #this is a string 
-    if selected_id == "DONE" or selected_id == "done" or selected_id == "Done" :
-        break   #this ends the loop
-    else:
-        #matching_products = [p for p in products if str(p["id"]) == str(selected_id)]
-        #matching_product = matching_products[0]
-        #total_price = total_price + matching_product["price"]
-        #print("SELECTED PRODUCT: " + matching_product["name"] + " " + str(matching_product["price"]))
+while True:
+    selected_id = input("Please input a product identifier, or 'DONE': " ) # the data input will always be a str
+
+    if selected_id == "DONE" or selected_id == "done" or selected_id == "Done":
+        break # stops the loop
+    elif str(selected_id) in valid_ids:
         selected_ids.append(selected_id)
-    if selected_id not in str(id_list):
-        print("PLEASE START OVER USING CORRECT PRODUCT ID")
-        exit()
+    else:
+        print("OH, detected invalid input! Please try again...")
+        next # proceeds into the next iteration of the loop (OK to omit in this basic example because there is no more code following it inside the loop before the loop repeats)
+
+print("SELECTED IDS:", selected_ids)
     
 #
 # INFO DISPLAY
